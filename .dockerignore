@@ -1,0 +1,11 @@
+**
+!order-service/
+!order-service/**
+!notification-service/
+!notification-service/**
+**/vendor/
+**/var/
+**/.git/
+**/.env.local*
+**/.env.*.local
+**/.env.dev

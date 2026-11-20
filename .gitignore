@@ -1,0 +1,11 @@
+/.env
+/.env.local*
+**/.env.dev
+**/.env.local*
+**/.env.*.local
+**/vendor/
+**/var/
+*.ova
+*.vdi
+*.vbox
+*.iso

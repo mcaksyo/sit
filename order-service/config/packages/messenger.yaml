@@ -1,0 +1,16 @@
+framework:
+    messenger:
+        transports:
+            async:
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+                options:
+                    exchange:
+                        name: orders
+                        type: direct
+                        default_publish_routing_key: order.created
+                    queues:
+                        orders_notifications:
+                            binding_keys: [order.created, order.status_changed]
+        routing:
+            'App\Message\OrderCreated': async
+            'App\Message\OrderStatusChanged': async
